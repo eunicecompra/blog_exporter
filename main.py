@@ -1,7 +1,7 @@
 from selenium import webdriver
 from selenium.webdriver import DesiredCapabilities
 
-driver = webdriver.Remote("http://localhost:4444/wd/hub", DesiredCapabilities.CHROME)
+driver = webdriver.Remote("http://selenium:4444/wd/hub", DesiredCapabilities.CHROME)
 driver.get("http://inanywhereelse.blogspot.com/")
 assert driver.title.rfind("In Anywhere Else") != -1
 
