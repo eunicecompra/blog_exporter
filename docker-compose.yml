@@ -2,6 +2,7 @@ version: "3.8"
 services:
   selenium:
     image: selenium/standalone-chrome
+    hostname: localhost
     ports:
       - 4444:4444
 
