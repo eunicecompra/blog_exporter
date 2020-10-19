@@ -1,3 +1,5 @@
 .idea/
 venv/
 output/*
+src/__pycache__/
+tests/__pycache__/
