@@ -12,6 +12,16 @@ services:
       dockerfile: Dockerfile
     depends_on:
       - selenium
-    command: ["/bin/bash", "./wait-for-it-master/wait-for-it.sh", "localhost:4444", "--", "python", "./main.py"]
+    command: /bin/bash -c "./wait-for-it-master/wait-for-it.sh localhost:4444
+             -- python -m src.main"
     volumes:
       - "./output:/app/output"
+
+  tests:
+    build:
+      context: .
+      dockerfile: Dockerfile
+    depends_on:
+      - selenium
+    command: /bin/bash -c "./wait-for-it-master/wait-for-it.sh localhost:4444
+             -- python -m unittest tests.website_test"
