@@ -1,14 +1,14 @@
-# [WIP] Blog Exporter
+# Blog Exporter
 Exports blog posts into pdf
 
-## Start
+## Running the app
 ```
-docker-compose up
+./run-app.sh
 ```
 
-## Stop
+## Running the tests
 ```
-docker-compose down
+./run-tests.sh
 ```
 
 # Libraries
